@@ -4,7 +4,7 @@
   "description": "to convert bot.txt to list",
   "main": "index.js",
   "scripts": {
-    "create": "npm i && tsc index.ts && node ."
+    "create": "tsc index.ts && node ."
   },
   "keywords": [],
   "author": "Xavier Horwood",

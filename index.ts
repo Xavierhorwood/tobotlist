@@ -14,8 +14,9 @@ async function processLineByLine() {
   var name = config.name;
   var description = config.description;
   var title = config.title;
+  var update_url = config.update_url
   var authors = '"cyrexlinuz","xavierhorwood"';
-  var file_info = '"file_info": {' + '"title":"' +title+ '",' + '"description":"' + description + '",' + '"name":"' + name + '",' +  '"authors": [' + authors + "]" + '},';
+  var file_info = '"file_info": {' + '"update_url":"' + update_url + '",' + '"title":"' +title+ '",' + '"description":"' + description + '",' + '"name":"' + name + '",' +  '"authors": [' + authors + "]" + '},';
   var steamids = '"players": [';
   var steamids2 = ']';
 
