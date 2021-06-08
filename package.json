@@ -1,0 +1,11 @@
+{
+  "name": "tobotlist",
+  "version": "1.0.0",
+  "description": "to convert bot.txt to list",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Xavier Horwood"
+}
