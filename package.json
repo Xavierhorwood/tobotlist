@@ -4,9 +4,11 @@
   "description": "to convert bot.txt to list",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "create": "tsc index.ts && node ."
   },
   "keywords": [],
   "author": "Xavier Horwood",
-  "dependencies": {}
+  "devDependencies": {
+    "@types/node": "^15.12.2"
+  }
 }
