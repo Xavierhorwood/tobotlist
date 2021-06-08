@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { setMaxListeners } = require('process');
 const readline = require('readline');
+var config = require('./config.json');
 
 async function processLineByLine() {
   const fileStream = fs.createReadStream('../bots.txt');
@@ -10,9 +11,9 @@ async function processLineByLine() {
     crlfDelay: Infinity
   });
 
-  var name = "cyrexlinuz bot list";
-  var description = "https://github.com/cyrexlinuz/detected-catbots/blob/main/bots.txt";
-  var title = "cyrexlinuz bot list";
+  var name = config.name;
+  var description = config.description;
+  var title = config.title;
   var authors = '"cyrexlinuz","xavierhorwood"';
   var file_info = '"file_info": {' + '"title":"' +title+ '",' + '"description":"' + description + '",' + '"name":"' + name + '",' +  '"authors": [' + authors + "]" + '},';
   var steamids = '"players": [';
@@ -40,7 +41,7 @@ async function processLineByLine() {
   var players = steamids + steamids2;
   players = players.substr(0, players.length - 2);
   players += "]";
-  var $schema = "https://raw.githubusercontent.com/PazerOP/tf2_bot_detector/master/schemas/v3/playerlist.schema.json";
+  var $schema = config.$schema;
   var all = "{" + '"$schema": "' + $schema + '",' + file_info + players + "}";
   fs.writeFileSync('../playerlist.cyrexlinuz.json', all);
 }
