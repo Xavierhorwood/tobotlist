@@ -36,12 +36,14 @@ async function processLineByLine() {
     var data3 = data2.replace("]","[")
     var data4 = data3.split("[");
     var data5 = "[" + data4[1] + "]"
-
+    
     steamids += '{ "attributes": ["cheater"], "steamid": "' + data5 + '"},'
     
     //steamids.push({"attributes" : attributes, "steamid" : data5})
   }
   var players = steamids + steamids2;
+  players = players.substr(0, players.length - 2)
+  players += "]"
   var $schema = "https://raw.githubusercontent.com/PazerOP/tf2_bot_detector/master/schemas/v3/playerlist.schema.json";
   var all = "{" + '"$schema": "' + $schema + '",' + file_info + players + "}";
   //console.log(all)
