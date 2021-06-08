@@ -1,6 +1,6 @@
 # tobotlist
 
-how to run
+# how to run
 
 put bots.txt in a folder ../ to the index.js
 
