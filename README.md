@@ -4,6 +4,6 @@ how to run
 
 put bots.txt in a folder ../ to the index.js
 
-then run and creates the list for you
+then run npm run create and there is you list next to bots.txt
 
 than remove the last , from playerlist.cyrexlinuz.json
